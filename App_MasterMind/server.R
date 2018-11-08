@@ -20,5 +20,13 @@ shinyServer(function(input, output) {
     
     
   })
+  output$print <- renderPrint({
+    
+    # generate bins based on input$bins from ui.R
+    input$opcje
+    
+    
+    
+  })
   
 })

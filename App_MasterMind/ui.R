@@ -22,12 +22,22 @@ shinyUI(fluidPage(
                    "Number of pins:",
                    min = 1,
                    max = 8,
-                   value = 4)
+                   value = 4),
+       numericInput("pins",
+                    "Wszystkie żetony:",
+                    min = 1,
+                    max = 8,
+                    value = 4),
+       checkboxGroupInput("opcje",
+                          "Opcje",
+                          choices = c("Duplikaty" = "duble",
+                                      "Puste" = "puste"))
     ),
-    
+
     # Show a plot of the generated distribution
     mainPanel(
-       tableOutput("df")
+       tableOutput("df"),
+       textOutput('print')
     )
   )
 ))
